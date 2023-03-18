@@ -1,0 +1,37 @@
+java_library_static {
+    name: "YifanFaceShared",
+    sdk_version: "current",
+    srcs: ["main/java/**/*.java", "withoutGpu/java/**/*.java"],
+    manifest: "main/AndroidManifest.xml",
+    required: ["yifan-detect-class1.tflite", "yifan-mobile_face_net.tflite"],
+
+    static_libs: [
+        "tensorflowlite_java",
+    ],
+}
+
+prebuilt_etc {
+    name: "yifan-detect-class1.tflite",
+    src: "main/assets/detect-class1.tflite",
+    sub_dir: "face",
+    required: ["yifan-detect-class1.txt"],
+}
+
+prebuilt_etc {
+    name: "yifan-detect-class1.txt",
+    src: "main/assets/detect-class1.txt",
+    sub_dir: "face",
+}
+
+prebuilt_etc {
+    name: "yifan-mobile_face_net.tflite",
+    src: "main/assets/mobile_face_net.tflite",
+    sub_dir: "face",
+    required: ["yifan-mobile_face_net.txt"],
+}
+
+prebuilt_etc {
+    name: "yifan-mobile_face_net.txt",
+    src: "main/assets/mobile_face_net.txt",
+    sub_dir: "face",
+}
