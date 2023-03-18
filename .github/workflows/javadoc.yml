@@ -32,11 +32,13 @@ jobs:
           distribution: adopt
       - name: Gradle Build Action
         run: ./gradlew :FaceShared:generateWithGpuReleaseJavadoc
+      - name: Combine docs
+        run: mkdir -p build/docs && cp -r FaceShared/build/docs/javadoc build/docs/FaceShared
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: 'FaceShared/build/docs/'
+          path: 'build/docs/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

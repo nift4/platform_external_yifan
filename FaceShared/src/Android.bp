@@ -12,7 +12,7 @@ java_library_static {
 
 prebuilt_etc {
     name: "yifan-detect-class1.tflite",
-    stem: "detect-class1.tflite",
+    filename: "detect-class1.tflite",
     src: "main/assets/detect-class1.tflite",
     sub_dir: "face",
     required: ["yifan-detect-class1.txt"],
@@ -20,14 +20,14 @@ prebuilt_etc {
 
 prebuilt_etc {
     name: "yifan-detect-class1.txt",
-    stem: "detect-class1.txt",
+    filename: "detect-class1.txt",
     src: "main/assets/detect-class1.txt",
     sub_dir: "face",
 }
 
 prebuilt_etc {
     name: "yifan-mobile_face_net.tflite",
-    stem: "mobile_face_net.tflite",
+    filename: "mobile_face_net.tflite",
     src: "main/assets/mobile_face_net.tflite",
     sub_dir: "face",
     required: ["yifan-mobile_face_net.txt"],
@@ -35,7 +35,7 @@ prebuilt_etc {
 
 prebuilt_etc {
     name: "yifan-mobile_face_net.txt",
-    stem: "mobile_face_net.txt",
+    filename: "mobile_face_net.txt",
     src: "main/assets/mobile_face_net.txt",
     sub_dir: "face",
 }
